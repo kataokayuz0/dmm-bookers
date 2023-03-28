@@ -1,0 +1,26 @@
+<!DOTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" media="all" href="/assets/stylesheets/show.css" data-turbolinks-track="reload">
+  </head>
+
+  <body>
+     <div>
+      <%= flash[:notice] %>
+    </div>
+    <p class="title">
+      <strong>Title:</strong>
+      <%= @book.title %>
+    </p>
+
+    <p class="body">
+      <strong>Body:</strong>
+      <%= @book.body %>
+    </p>
+
+
+    <a class="Edit"><%= link_to "Edit", "/books/#{@book.id}/edit" %></a>
+    |
+    <a class="Back"><%= link_to "Back", "/books/index" %></a>
+  </body>
+</html>
